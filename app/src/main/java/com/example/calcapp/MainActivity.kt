@@ -19,9 +19,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
+        val first = editText1
+        val second =editText2
         if(v.id == R.id.button1){
             val intent = Intent(this, SecondCalcApp::class.java)
-            intent.putExtra("VALUE1", editText1)
+            intent.putExtra("VALUE1", first)
             intent.putExtra("VALUE2", editText2)
             intent.putExtra("VALUE3", 1)
             startActivity(intent)
